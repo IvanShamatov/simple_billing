@@ -1,8 +1,8 @@
 Redmine::Plugin.register :simple_billing do
-  name 'Simple Billing plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
+  name 'Simple billing plugin'
+  author 'Ivan Shamatov'
+  description 'You may call it really dump billing plugin, which just allows you to bill your customers and generate report.'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/IvanShamatov/simple_billing'
+  author_url 'http://activesupport.pro'
 end
