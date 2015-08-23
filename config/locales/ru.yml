@@ -1,2 +1,8 @@
 ru:
-  billing_title: "Биллинг"
+  label_billing: "Биллинг"
+  create_bill: "Выставить счет"
+  bill_id: "Номер счета"
+  bill_status: "Статус"
+  bill_total_sum: "Итоговая сумма"
+  bill_created_at: "Создан"
+  bill_updated_at: "Обновлен"

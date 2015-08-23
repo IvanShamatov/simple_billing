@@ -1,3 +1,30 @@
-<% @issues.each do |issue| %>
-  <%= issue.inspect %>
+<h2><%= l(:label_billing) %></h2>
+<p class="subtitle">здесь подзаголовок</p>
+
+<div >
+  <table>
+    <tr>
+      <th><%= l(:bill_id)%></th>
+      <th><%= l(:bill_status)%></th>
+      <th><%= l(:bill_total_sum)%></th>
+      <th><%= l(:bill_created_at)%></th>
+      <th><%= l(:bill_updated_at)%></th>
+    </tr>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.id %></td>
+        <td><%= bill.status %></td>
+        <td><%= bill.total_sum %></td>
+        <td><%= bill.created_at %></td>
+        <td><%= bill.updated_at %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+
+<% content_for :sidebar do %>
+  <div>Placeholder for sidebar</div>
 <% end %>
+
+<% html_title(l(:label_billing), @author) -%>

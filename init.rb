@@ -1,3 +1,5 @@
+require_dependency 'hooks'
+
 Redmine::Plugin.register :simple_billing do
   name 'Simple billing plugin'
   author 'Ivan Shamatov'
@@ -6,10 +8,12 @@ Redmine::Plugin.register :simple_billing do
   url 'https://github.com/IvanShamatov/simple_billing'
   author_url 'http://activesupport.pro'
 
-  menu :project_menu, :billing, {controller: "bills", action: "index"}, caption: :billing_title, :param => :project_id
-
-  project_module :simple_billing do 
-    permission :view_billing, :billing => :index
-  end
+  menu :top_menu, :bills, 
+      {controller: "bills", action: "index"}, 
+      :caption => :label_billing, 
+      :if => Proc.new {
+        User.current.allowed_to?(:view_bills, nil, :global => true) ||
+        User.current.admin?
+      }
 
 end
