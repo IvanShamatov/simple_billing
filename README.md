@@ -8,7 +8,7 @@ This is really simple plugin, here is my context in which I'm working:
 
 * Bills are global (you have billing menu item on top left menu). You see all invoices for all projects on one page.
 * Customers are project-scoped. You can change customer information in project's settings. This also means that one project = one customer (in case of simplicity).
-* In any project's issues page select multiple (closed/finished) issues you want to include in invoice, get right-click menu and click "create invoice"
+* On any project's issues page select multiple (closed/finished) issues you want to include in invoice, get right-click menu and click "create invoice"
 * You can customize invoice template just like any other erb file in simple_billing/app/views/bills/invoice.html.erb
 
 
