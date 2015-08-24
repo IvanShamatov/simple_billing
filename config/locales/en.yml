@@ -1,9 +1,16 @@
 # English strings go here for Rails i18n
 en:
   label_billing: "Billing"
+  label_bill_new: "Create new bill"
   create_bill: "Bill customer"
   bill_id: "Invoice #"
   bill_status: "Status"
   bill_total_sum: "Total amount"
   bill_created_at: "Created"
   bill_updated_at: "Updated"
+  billed_issues_subject: "Item description"
+  billed_issues_rate: "Rate"
+  billed_issues_quantity: "Qty"
+  billed_issues_units: "Units"
+  billed_issues_tax: "Tax"
+  billed_issues_sum: "Sum"

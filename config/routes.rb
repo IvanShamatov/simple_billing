@@ -6,3 +6,4 @@ resources :bills do
 end
 
 get "billing" => "bills#index"
+

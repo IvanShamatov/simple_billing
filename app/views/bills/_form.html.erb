@@ -1,0 +1,25 @@
+<%= @bill.issues.first.project.identifier %>
+<table>
+  <th>
+    <td>#</td>
+    <td><%= l :billed_issues_subject %></td>
+    <td><%= l :billed_issues_rate %></td>
+    <td><%= l :billed_issues_quantity %></td>
+    <td><%= l :billed_issues_units %></td>
+    <td><%= l :billed_issues_tax %></td>
+    <td><%= l :billed_issues_sum %></td>
+  </th>
+  <%= f.fields_for :billed_issues do |billed_issue_f| %>
+    <% @bill.issues.each do |issue| %>
+      <tr>
+        <td><%= billed_issue_f.hidden_field :issue_id, value: issue.id %><%=issue.id%></td>
+        <td><%= billed_issue_f.text_field :subject, value: issue.subject %></td>
+        <td><%= billed_issue_f.text_field :rate %></td>
+        <td><%= billed_issue_f.text_field :quantity %></td>
+        <td><%= billed_issue_f.text_field :units %></td>
+        <td><%= billed_issue_f.text_field :tax %></td>
+        <td><%= billed_issue_f.text_field :sum %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
