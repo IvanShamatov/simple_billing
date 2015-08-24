@@ -16,4 +16,8 @@ Redmine::Plugin.register :simple_billing do
         User.current.admin?
       }
 
+  project_module :simple_billing do 
+    
+  end
+
 end
